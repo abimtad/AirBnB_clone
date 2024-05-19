@@ -17,7 +17,7 @@ class TestReview(unittest.TestCase):
     @classmethod
     def tearDownClass(self):
         """Delete instance after a test"""
-        
+
         del self.inst
 
     def test_user_id(self):

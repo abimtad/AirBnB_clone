@@ -2,12 +2,10 @@
 
 """Define unittest for models/engine/file_storage.py"""
 
-import json
 import unittest
+
 import models
-from datetime import datetime
 from models.engine.file_storage import FileStorage
-from models.base_model import BaseModel
 
 
 class TestFileStorage_instantiation(unittest.TestCase):
@@ -20,7 +18,7 @@ class TestFileStorage_instantiation(unittest.TestCase):
 
     def test_FileStorage_instantiation_with_arg(self):
         """Test init with args = None"""
-        
+
         with self.assertRaises(TypeError):
             FileStorage(None)
 
@@ -31,7 +29,7 @@ class TestFileStorage_instantiation(unittest.TestCase):
 
     def testFileStorage_objects_is_private_dict(self):
         """Test object is a private dictionary"""
-        
+
         self.assertEqual(dict, type(FileStorage._FileStorage__objects))
 
     def test_storage_initializes(self):

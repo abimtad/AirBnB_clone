@@ -21,11 +21,13 @@ class BaseModel():
     DateF = "%Y-%m-%dT%H:%M:%S.%f"
 
     def __init__(self, *args, **kwargs):
-        """Initialize an instance with either provided dictionary values or randomly generated ones.
+        """Initialize an instance with either provided dictionary values or -
+        randomly generated ones.
 
         Args:
             *args: Currently not in use.
-            **kwargs: Dictionary representation of an object to initialize the instance from.
+            **kwargs: Dictionary representation of an object to -
+            initialize the instance from.
         """
 
         if not kwargs:
@@ -47,10 +49,12 @@ class BaseModel():
         models.storage.save()
 
     def __str__(self):
-        """Returns custom dictionary representation of the instance """
+        """Returns custom dictionary representation of -
+        the instance """
 
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
-
+        return "[{}] ({}) {}".format(
+            self.__class__.__name__, self.id, self.__dict__
+        )
 
     def to_dict(self):
         """Return dict representation of the instance with additional
