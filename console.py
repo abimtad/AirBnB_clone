@@ -2,6 +2,7 @@
 
 """Defines the HBnB console."""
 
+import utils.session
 import ast
 import cmd
 import re
